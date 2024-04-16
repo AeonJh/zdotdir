@@ -49,8 +49,8 @@ alias zdot='cd ${ZDOTDIR:-~}'
 # custom
 alias c="clear"
 alias info='info --vi-keys'
-[ -f $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh ] && alias get_idf='. $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh'
-[ -f $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh ] && alias get_matter='. $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh'
+[[ -f $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh ]] && alias get_idf='. $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh'
+[[ -f $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh ]] && alias get_matter='. $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh'
 command -v minicom >/dev/null 2>&1 && alias minicom='minicom -con'
-[ -f $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py ] && alias parser='python3 $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py'
-[ -f $HOME/Projects/work/nl-app/scripts/practice/calibration.sh ] && alias ramp='/bin/bash $HOME/Projects/work/nl-app/scripts/practice/calibration.sh'
+[[ -f $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py ]] && alias parser='python3 $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py'
+[[ -f $HOME/Projects/work/nl-app/scripts/practice/calibration.sh ]] && alias ramp='/bin/bash $HOME/Projects/work/nl-app/scripts/practice/calibration.sh'
