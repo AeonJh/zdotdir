@@ -5,20 +5,26 @@
 
 # single character aliases - be sparing!
 alias _=sudo
-alias l=ls
-alias g=git
-
-# mask built-ins with better defaults
-alias vi=vim
 
 # more ways to ls
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+alias ll='ls -l'      #long list
 alias ldot='ls -ld .*'
+alias lS='ls -1FSsh'
+alias lart='ls -1Fcart'
+alias lrt='ls -1Fcrt'
+alias lsr='ls -lARFh' #Recursive list of files and directories
+alias lsn='ls -1'     #A column contains name of files and directories
+
+# better grep
+alias grep='grep --color'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
 # fix common typos
 alias quit='exit'
-alias cd..='cd ..'
 
 # tar
 alias tarls="tar -tvf"
@@ -39,3 +45,12 @@ alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
 alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
 alias zdot='cd ${ZDOTDIR:-~}'
+
+# custom
+alias c="clear"
+alias info='info --vi-keys'
+[ -f $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh ] && alias get_idf='. $HOME/Projects/work/nl-app/third_party/esp-idf/export.sh'
+[ -f $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh ] && alias get_matter='. $HOME/Projects/work/nl-app/third_party/esp-matter/export.sh'
+command -v minicom >/dev/null 2>&1 && alias minicom='minicom -con'
+[ -f $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py ] && alias parser='python3 $HOME/Projects/work/nl-app/scripts/practice/tlv_parse.py'
+[ -f $HOME/Projects/work/nl-app/scripts/practice/calibration.sh ] && alias ramp='/bin/bash $HOME/Projects/work/nl-app/scripts/practice/calibration.sh'
