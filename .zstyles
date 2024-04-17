@@ -9,4 +9,4 @@
 
 # zstyle ':antidote:bundle' file ${ZDOTDIR:-~}/.zplugins.txt
 # zstyle ':antidote:bundle' use-friendly-names 'yes'
-zstyle ':antidote:bundle /home/aeonjh/.nvm/nvm.sh kind:zsh' lazy 'yes'
+zstyle ':antidote:bundle ~/.nvm/nvm.sh kind:zsh' lazy 'yes'

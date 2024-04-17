@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 #!/bin/zsh
 #
 # .zshrc - Zsh file loaded on interactive shell sessions.
@@ -70,3 +71,4 @@ function zvm_after_init() {
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# zprof
