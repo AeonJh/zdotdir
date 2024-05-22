@@ -64,6 +64,7 @@ jeffreytse/zsh-vi-mode kind:defer
 ###
 $ZDOTDIR/.aliases
 #$ZDOTDIR/custom/plugins/example
+$ZDOTDIR/functions/awesome_func
 
 ### Local Plugins with Variables
 #
