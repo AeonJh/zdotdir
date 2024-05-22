@@ -1,11 +1,37 @@
 #!/bin/zsh
 
 ### Generic functions
+#
+# 1. h2d: Convert hex to decimal
+# 2. d2h: Convert decimal to hex
 h2d(){
+  usage="Usage: h2d <hex_number>"
+  # check if hex number is provided
+  if [[ -z "$1" ]]; then
+    echo $usage
+    return
+  fi
   echo "ibase=16; $@"|bc
 }
 
 d2h(){
+  usage="Usage: d2h <decimal_number>"
+  # check if decimal number is provided
+  if [[ -z "$1" ]]; then
+    echo $usage
+    return
+  fi
   echo "obase=16; $@"|bc
 }
 
+# 3. display various color codes
+# more color codes: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+color(){
+  usage="Usage: color <color_code> <text>"
+  # check if color code && text is provided
+  if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+    echo $usage
+    return
+  fi
+  echo -e "\e[$1m$2\e[0m"
+}
