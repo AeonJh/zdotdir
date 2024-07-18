@@ -60,6 +60,12 @@ antidote load
 
 [[ -x "$(command -v bat)" ]] && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+#
+# Fix slow tab completion (ref: https://github.com/sorin-ionescu/prezto/issues/1820)
+#
+
+unsetopt PATH_DIRS
+
 
 #
 # Custom zsh-vi-mode configuration
