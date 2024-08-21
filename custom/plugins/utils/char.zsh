@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 ### Generic functions
 #
 # 1. h2d: Convert hex to decimal
