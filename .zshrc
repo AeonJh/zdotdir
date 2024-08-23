@@ -87,7 +87,7 @@ function zvm_after_init() {
 # [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # theme: starship
-eval "$(starship init zsh)"
+[[ -x "$(command -v starship)" ]] && eval "$(starship init zsh)"
 
 # performance testing
 # zprof
