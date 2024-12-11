@@ -40,3 +40,13 @@ path=(
   /usr/local/{,s}bin(N)
   $path
 )
+
+#
+# Environment Variables
+#
+
+if [[ -f ${HOME}/.config/local/.env.local ]]; then
+    source ${HOME}/.config/local/.env.local
+else
+    echo -e "\033[0;33mWARN: ${HOME}/.config/local/.env.local not found.\033[0m"
+fi

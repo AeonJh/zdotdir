@@ -31,11 +31,6 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
 #
-# Work - local profile
-# 
-[[ -f $HOME/matter-assets/nl_keys ]] && source $HOME/matter-assets/nl_keys
-
-#
 # Cunstom color palette for man page.(command less)
 #
 
