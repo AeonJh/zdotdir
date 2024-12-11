@@ -37,7 +37,7 @@ antidote load
 
 #
 # Cunstom color palette for man page.(command less)
-# 
+#
 
 # export LESS_TERMCAP_mb=$'\E[1m\E[32m'
 # export LESS_TERMCAP_mh=$'\E[2m'
@@ -87,6 +87,27 @@ function zvm_after_init() {
 
 # theme: starship
 [[ -x "$(command -v starship)" ]] && eval "$(starship init zsh)"
+
+
+# fzf
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
+#
+# python version manager
+#
+
+# Load pyenv automatically by appending
+# the following to
+# ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
+# and ~/.bashrc (for interactive shells) :
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+eval "$(pyenv virtualenv-init -)"
+
 
 # performance testing
 # zprof
