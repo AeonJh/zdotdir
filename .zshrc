@@ -60,6 +60,13 @@ antidote load
 
 unsetopt PATH_DIRS
 
+#
+# History settings
+#
+
+# export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=50000
+export SAVEHIST=10000
 
 #
 # Custom zsh-vi-mode configuration
