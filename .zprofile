@@ -50,3 +50,7 @@ if [[ -f ${HOME}/.config/local/.env.local ]]; then
 else
     echo -e "\033[0;33mWARN: ${HOME}/.config/local/.env.local not found.\033[0m"
 fi
+
+if [[ -f "$HOME/.cargo/env" ]]; then
+  . "$HOME/.cargo/env"
+fi
