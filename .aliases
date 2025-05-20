@@ -30,10 +30,6 @@ alias quit='exit'
 alias tarls="tar -tvf"
 alias untar="tar -xf"
 
-# find
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
 # url encode/decode
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
     print(ul.unquote_plus(sys.argv[1]))"'
