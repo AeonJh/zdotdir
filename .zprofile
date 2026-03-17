@@ -17,7 +17,7 @@ fi
 
 export EDITOR="${EDITOR:-vim}"
 export VISUAL="${VISUAL:-vim}"
-command -v nvim >/dev/null 2>&1 && export EDITOR="${EDITOR:-nvim}" && export VISUAL="${VISUAL:-nvim}"
+command -v nvim >/dev/null 2>&1 && export EDITOR=nvim && export VISUAL=nvim
 export PAGER="${PAGER:-less}"
 
 #
@@ -54,3 +54,5 @@ fi
 if [[ -f "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
 fi
+
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"

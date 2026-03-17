@@ -13,6 +13,7 @@
 
 # Zsh options.
 setopt extended_glob
+setopt interactive_comments # enable comments(#) in interactive shells
 
 # Autoload functions you might want to use with antidote.
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
@@ -106,6 +107,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -d $PYENV_ROOT ]] && eval "$(pyenv init --path)"
 [[ -d $PYENV_ROOT ]] && eval "$(pyenv virtualenv-init -)"
+
+# ghcup-env
+[ -f "/home/aeonjh-wsl/.ghcup/env" ] && . "/home/aeonjh-wsl/.ghcup/env"
 
 # performance testing
 # zprof

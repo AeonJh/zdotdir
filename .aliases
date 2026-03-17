@@ -7,6 +7,11 @@
 alias _=sudo
 
 # more ways to ls
+if command -v lsd >/dev/null 2>&1; then
+    alias ls='lsd --group-dirs first --icon never'  #use lsd if available
+else
+    alias ls='ls --color=auto --group-directories-first' #GNU ls
+fi
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
