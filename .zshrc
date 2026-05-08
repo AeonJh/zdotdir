@@ -111,5 +111,20 @@ export PYENV_ROOT="$HOME/.pyenv"
 # ghcup-env
 [ -f "/home/aeonjh-wsl/.ghcup/env" ] && . "/home/aeonjh-wsl/.ghcup/env"
 
+# Shell-GPT integration ZSH v0.2
+if [[ -x "$(command -v sgpt)" ]]; then
+    _sgpt_zsh() {
+        if [[ -n "$BUFFER" ]]; then
+            _sgpt_prev_cmd=$BUFFER
+            BUFFER+="⌛"
+            zle reset-prompt
+            BUFFER=$(sgpt --shell <<< "$_sgpt_prev_cmd" --no-interaction)
+            zle end-of-line
+        fi
+    }
+    zle -N _sgpt_zsh
+    bindkey '^l' _sgpt_zsh
+fi
+
 # performance testing
 # zprof
