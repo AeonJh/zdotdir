@@ -23,13 +23,6 @@ export PAGER="${PAGER:-less}"
 #
 # Paths
 #
-
-if [[ -f ${HOME}/.config/local/.path.local ]]; then
-    source ${HOME}/.config/local/.path.local
-else
-    echo -e "\033[0;33mWARN: ${HOME}/.config/local/.path.local not found.\033[0m"
-fi
-
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
 
@@ -44,12 +37,6 @@ path=(
 #
 # Environment Variables
 #
-
-if [[ -f ${HOME}/.config/local/.env.local ]]; then
-    source ${HOME}/.config/local/.env.local
-else
-    echo -e "\033[0;33mWARN: ${HOME}/.config/local/.env.local not found.\033[0m"
-fi
 
 if [[ -f "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
